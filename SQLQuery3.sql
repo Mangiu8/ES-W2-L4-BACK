@@ -29,14 +29,18 @@
 --Select top (1) RedditoMensile from Impiegati Order by RedditoMensile ASC
 
 --Visualizzare gli impiegati assunti dall’ 01/01/2007 all’ 01/01/2008; 
---Select count(*) as ImpiegatiAssuntiInQuelPeriodo from Impieghi  where DataAssunzione between '2022-01-01' and '2023-01-01'
+--Select Nome, Cognome, Impiego, DataAssunzione from Impiegati
+--INNER JOIN 
+--Impieghi ON 
+--Impiegati.IDImpiego = Impieghi.IDImpiego
+--where DataAssunzione between '2022-01-01' and '2023-01-01'
 
 --Tramite una query parametrica che identifichi il tipo di impiego, 
 --visualizzare tutti gli impiegati che corrispondono a quel tipo di impiego; 
-Select Cognome, Nome, CodiceFiscale, Eta, RedditoMensile, Impiego, DataAssunzione from Impiegati as E
-INNER JOIN
-Impieghi as I ON 
-E.IDImpiego = I.IDImpiego
+--Select Cognome, Nome, CodiceFiscale, Eta, RedditoMensile, Impiego, DataAssunzione from Impiegati as E
+--INNER JOIN
+--Impieghi as I ON 
+--E.IDImpiego = I.IDImpiego
 
 --Visualizzare l’età media dei lavoratori all’interno dell’azienda.
 --Select AVG(Eta) as EtaMedia from Impiegati
